@@ -1,3 +1,8 @@
+let firstOperand = 0;
+let secondOperand = 0;
+let currentOperation = null;
+
+
 const add = function() { // add every number in the array
     let sum = 0;
     for (let i = 0; i < arguments.length; i++) {
@@ -51,3 +56,20 @@ const divide = function(x, y) { // divide x by y
     }
   }
     
+  const clearButton = document.getElementById("clear");
+  const lastOperationScreen = document.getElementById("lastOperation");
+  const currentOperationScreen = document.getElementById("currentOperation");
+
+
+clearButton.addEventListener("click", clear);
+
+
+
+function clear(){
+    lastOperationScreen.textContent = "";
+    currentOperationScreen.textContent = "0";
+    firstOperand = '';
+    secondOperand = '';
+    //currentOperation = null;
+  };
+   
