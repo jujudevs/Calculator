@@ -59,9 +59,24 @@ const divide = function(x, y) { // divide x by y
   const clearButton = document.getElementById("clear");
   const lastOperationScreen = document.getElementById("lastOperation");
   const currentOperationScreen = document.getElementById("currentOperation");
+  const numberButtons = document.querySelectorAll('[data-number]');
 
 
 clearButton.addEventListener("click", clear);
+
+ numberButtons.forEach((button) => 
+  button.addEventListener("click", () => appendNumber(button.textContent))
+);
+
+function appendNumber(number){
+  if (currentOperationScreen.textContent === "0"){
+    currentOperationScreen.textContent = number;
+  }
+  else{ 
+    currentOperationScreen.textContent += number;
+  }
+}
+
 
 
 
