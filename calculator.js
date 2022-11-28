@@ -4,7 +4,7 @@ let currentOperation = null;
 let shouldResetScreen = false;
 
 
-const add = function() { // add every number in the array
+const add = function() { 
     let sum = 0;
     for (let i = 0; i < arguments.length; i++) {
       sum += arguments[i];
@@ -15,14 +15,14 @@ const add = function() { // add every number in the array
   };
 
 
-const subtract = function(x, y) {  // subtract y from x
+const subtract = function(x, y) {  
     return x - y;
   
    
       
   };
 
-  const sum = function(array) { // computes the sum of an array of many numbers 
+  const sum = function(array) { 
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
       sum += array[i];
@@ -37,7 +37,7 @@ const multiply = function(x,y){
 }
 
 
-const divide = function(x, y) { // divide x by y
+const divide = function(x, y) { 
     return x / y;
   
   }; 
@@ -106,10 +106,9 @@ clearButton.addEventListener("click", clear);
 );
 
 function appendNumber(number){
-  if (currentOperationScreen.textContent === "0" || shouldResetScreen) {
+  if (currentOperationScreen.textContent === "0" || shouldResetScreen) 
     resetScreen();
     currentOperationScreen.textContent += number;
-  }
 }
 
 function resetScreen(){
@@ -128,4 +127,4 @@ function clear(){
     currentOperation = null;
   };
    
-  //git test
+  
